@@ -1,0 +1,433 @@
+/* (================================general-style=====================================) */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+:root {
+  --bg-color: rgb(247, 248, 249);
+  --span-color: rgb(159, 163, 167);
+  --h1-color: #333;
+  --defalut-margin: 1rem;
+  --p-color: #9fa3a7;
+  --learn-bg: #f7f8f9;
+  --a-color: #27b9c2;
+  --keyboard-bg: #f05638;
+  --keybord-color: #fffbfb;
+  --ylellow-color: #ffc80a;
+  --best-a-bg: #fa684f;
+  --white-color: #fff;
+  --best-bg: #93b6b7;
+  --icloud-bg: #8f76bc;
+  --iclod-circle: #8166b0;
+  --icloud-icon-bg: #8b72b6;
+  --black-color: #000;
+  --connect-bg-color: #35cfed;
+  --connect: #38d5f4;
+  --popular-bg: #7bc424;
+  --vision-bg: #2c2c2c;
+}
+P {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: var(--p-color);
+  line-height: 2.6rem;
+  font-size: 1.4rem;
+}
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: "Arvo", sans-serif;
+  font-weight: 400;
+}
+h2 {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--h1-color);
+}
+a {
+  font-family: "Open Sans", sans-serif;
+  color: var(--a-color);
+  line-height: 2.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--span-color);
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 0.5fr;
+  grid-template-areas:
+    "iphone6 iphone6 iphone6 iphone6 iphone6 iphone6 learn_more learn_more learn_more learn_more learn_more learn_more"
+    "new_keyboard new_keyboard new_keyboard imac imac imac imac imac imac icloud icloud icloud"
+    "games games games beast_choice beast_choice beast_choice beast_choice beast_choice beast_choice icloud icloud icloud"
+    "connect_twitter connect_twitter connect_twitter popular popular popular vision vision vision vision vision vision";
+}
+/* (================================iphone6=====================================) */
+.iphone6 {
+  grid-area: iphone6;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 calc(var(--defalut-margin) * 4);
+  align-items: center;
+}
+.iphone6 .iphone_des {
+  width: 32%;
+}
+.iphone6 .iphone_des h2 {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  margin: var(--defalut-margin) 0 calc(var(--defalut-margin) * 2);
+}
+.iphone6 .iphone_des p {
+  color: var(--p-color);
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+}
+.iphone6 .iphone_img {
+  width: 33%;
+  height: 100%;
+  padding-top: calc(var(--defalut-margin) * 4);
+}
+.iphone6 .iphone_img img {
+  width: 100%;
+  display: block;
+  /* height: 100%; */
+}
+/* (================================learn_more=====================================) */
+
+.learn_more {
+  grid-area: learn_more;
+  background-color: var(--learn-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.learn_more h1 {
+  margin: calc(var(--defalut-margin) * 2) 0 var(--defalut-margin);
+  font-size: 4.8rem;
+  line-height: 6rem;
+  max-width: 55rem;
+}
+.learn_more a {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+/* (================================new_keyboard=====================================) */
+.new_keyboard {
+  background-color: var(--keyboard-bg);
+  grid-area: new_keyboard;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.new_keyboard h2 {
+  color: var(--keybord-color);
+  margin-top: calc(var(--defalut-margin));
+  max-width: 23rem;
+}
+.new_keyboard a {
+  color: var(--ylellow-color);
+  text-decoration: none;
+  margin-top: calc(var(--defalut-margin) * 2);
+  letter-spacing: 0.24rem;
+  line-height: 2.6rem;
+  font-size: 1.2rem;
+}
+.new_keyboard a i {
+  color: var(--ylellow-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.new_keyboard img {
+  width: 319px;
+}
+/* (================================imac=====================================) */
+.imac {
+  grid-area: imac;
+  display: flex;
+  padding: calc(var(--defalut-margin) * 6.8) calc(var(--defalut-margin) * 6) 0;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.imac .img_heading {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.imac .imac_heading {
+  display: flex;
+  flex-direction: column;
+}
+.imac .imac_heading span {
+  letter-spacing: 0.2rem;
+}
+.imac .imac_heading h2 {
+  margin: calc(var(--defalut-margin)) 0 calc(var(--defalut-margin) * 0.26);
+  max-width: 18rem;
+}
+.imac .imac_img {
+  margin-top: calc(var(--defalut-margin) * 2);
+  width: 72%;
+}
+.imac img {
+  width: 100%;
+  display: block;
+}
+.imac .imac_desc {
+  width: 47%;
+}
+.imac .imac_desc a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.24rem;
+}
+/* (================================games=====================================) */
+.games {
+  background-color: var(--learn-bg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: games;
+}
+.games h2 {
+  margin: calc(var(--defalut-margin)) 0 calc(var(--defalut-margin) * 2);
+}
+.games .games_img {
+  position: relative;
+  left: -7%;
+}
+
+.games img {
+  width: 24.8rem;
+  display: block;
+}
+.games a {
+  font-size: 1.2rem;
+  letter-spacing: 0.24rem;
+  text-decoration: none;
+}
+/* (================================best_choice=====================================) */
+.beast_choice {
+  text-align: center;
+  color: var(--white-color);
+  grid-area: beast_choice;
+  position: relative;
+  background-color: var(--best-bg);
+  overflow: hidden;
+}
+.beast_choice span {
+  top: calc(var(--defalut-margin) * 2);
+  left: calc(var(--defalut-margin) * 3);
+  position: absolute;
+  background-color: var(--best-a-bg);
+  color: var(--white-color);
+  font-size: 0.8rem;
+  padding: 0.8rem var(--defalut-margin);
+  border-radius: calc(var(--defalut-margin) / 2);
+  letter-spacing: 0.2rem;
+  line-height: 0.2rem;
+}
+.beast_choice .best_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/ux.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 80%;
+  position: absolute;
+  bottom: 0;
+}
+.beast_choice h2 {
+  margin: auto;
+  max-width: 28rem;
+  padding: calc(var(--defalut-margin) * 3.1) 0;
+  font-weight: 700;
+  color: var(--white-color);
+}
+.beast_choice img {
+  position: relative;
+  left: -12%;
+  width: 90%;
+}
+/* (================================icloud=====================================) */
+
+.icloud {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--icloud-bg);
+  grid-area: icloud;
+}
+.icloud .icloud_circle {
+  background-color: var(--iclod-circle);
+  width: 37.3rem;
+  height: 37.3rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icloud .icloud_icon {
+  padding: calc(var(--defalut-margin) / 2) calc(var(--defalut-margin) * 1.3);
+  background-color: var(--icloud-icon-bg);
+  border-radius: 6rem;
+}
+.icloud i {
+  color: var(--ylellow-color);
+  font-weight: 700;
+  font-size: 1rem;
+  padding-right: 0.4rem;
+}
+.icloud .icloud_icon span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white-color);
+  letter-spacing: 0.24rem;
+}
+.icloud img {
+  padding-top: calc(var(--defalut-margin) * 2);
+  width: 65%;
+}
+.icloud span {
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.icloud h2 {
+  margin: calc(var(--defalut-margin) * 2) 0 var(--defalut-margin);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+.icloud p {
+  color: var(--white-color);
+  width: 76%;
+  margin: auto;
+}
+.icloud button {
+  margin-top: calc(var(--defalut-margin) * 3);
+}
+.icloud button a {
+  font-size: 1.2rem;
+  padding: calc(var(--defalut-margin) * 1.4) calc(var(--defalut-margin) * 2.8);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--ylellow-color);
+  color: var(--black-color);
+  border-radius: 100vh;
+  letter-spacing: 0.24rem;
+}
+
+/* (================================connect_twitter=====================================) */
+.connect_twitter {
+  grid-area: connect_twitter;
+  background-color: var(--connect);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.connect_twitter .connect_circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  background-color: var(--connect-bg-color);
+  text-align: center;
+  top: -10%;
+}
+.connect_twitter img {
+  width: 4.3rem;
+}
+.connect_twitter h2 {
+  color: var(--white-color);
+  margin: calc(var(--defalut-margin)) 0;
+  width: 60%;
+}
+/* (================================popular=====================================) */
+.popular {
+  grid-area: popular;
+  background-color: var(--learn-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.popular span {
+  background-color: var(--popular-bg);
+  font-size: 0.8rem;
+  color: var(--white-color);
+  text-transform: uppercase;
+  padding: 0.1rem var(--defalut-margin);
+  border-radius: calc(var(--defalut-margin) / 2);
+  letter-spacing: 0.2rem;
+}
+.popular h2 {
+  margin: calc(var(--defalut-margin));
+  width: 60%;
+}
+/* (================================vision=====================================) */
+.vision {
+  display: flex;
+  justify-content: space-around;
+  grid-area: vision;
+  background-color: var(--vision-bg);
+  align-items: center;
+}
+.vision .tv_img {
+  width: 33%;
+}
+.vision img {
+  width: 100%;
+  display: block;
+}
+.vision h2 {
+  width: 33%;
+  color: var(--white-color);
+}

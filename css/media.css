@@ -1,0 +1,251 @@
+/* html,
+body {
+  overflow-x: hidden;
+} */
+:root {
+  --defalut-margin: 1rem;
+}
+
+@media screen and (max-width: 478px) {
+  span {
+    letter-spacing: 0.2rem;
+  }
+  .container {
+    grid-template-rows: repeat(10, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "learn_more"
+      "iphone6"
+      "new_keyboard"
+      "games"
+      "imac"
+      "connect_twitter"
+      "beast_choice"
+      "icloud"
+      "popular"
+      "vision";
+  }
+  /* (================================iphone6=====================================) */
+  .iphone6 {
+    flex-direction: column;
+    padding: calc(var(--defalut-margin) * 4) 2rem 0;
+    justify-content: center;
+  }
+  .iphone6 .iphone_des {
+    width: 100%;
+  }
+  .iphone6 .iphone_img {
+    width: 70%;
+    padding-top: calc(var(--defalut-margin) * 4);
+  }
+  /* (================================learn_more=====================================) */
+  .learn_more {
+    padding: calc(var(--defalut-margin) * 5) 0;
+  }
+  .learn_more h1 {
+    font-weight: 400;
+    max-width: 32rem;
+    line-height: 4.9rem;
+    font-size: 3.5rem;
+  }
+  /* (================================new_keyboard=====================================) */
+  .new_keyboard {
+    padding: calc(var(--defalut-margin) * 4) 0;
+  }
+  /* (================================games=====================================) */
+  .games {
+    padding: calc(var(--defalut-margin) * 3) 0;
+  }
+  /* (================================imac=====================================) */
+  .imac {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: calc(var(--defalut-margin) * 6.8) calc(var(--defalut-margin) * 1.4)
+      calc(var(--defalut-margin) * 5);
+  }
+  .imac .imac_heading,
+  .imac .img_heading {
+    width: 100%;
+  }
+  .imac .imac_heading h2 {
+    max-width: 33rem;
+  }
+  .imac .imac_desc a {
+    display: inline-block;
+    margin-top: calc(var(--defalut-margin) * 2);
+  }
+  .imac .imac_img {
+    margin: calc(var(--defalut-margin) * 2) 0;
+  }
+  .imac .imac_desc {
+    width: 100%;
+  }
+
+  /* (================================beast_choice=====================================) */
+  .beast_choice {
+    padding-top: calc(var(--defalut-margin) * 3);
+  }
+  .beast_choice .best_img {
+    position: static;
+  }
+  /* (================================icloud=====================================) */
+  .icloud {
+    padding: calc(var(--defalut-margin) * 3) calc(var(--defalut-margin) * 1.8)
+      calc(var(--defalut-margin) * 7);
+  }
+  /* (================================popular=====================================) */
+  .popular {
+    padding: calc(var(--defalut-margin) * 3) 0;
+  }
+  /* (================================vision=====================================) */
+  .vision {
+    text-align: center;
+    flex-direction: column;
+    padding: 0 calc(var(--defalut-margin) * 1.8) calc(var(--defalut-margin) * 3);
+  }
+  .vision .tv_img {
+    width: 100%;
+    position: relative;
+    left: -10%;
+  }
+  .vision img {
+    width: 27.1rem;
+  }
+  .vision h2 {
+    width: 89%;
+  }
+  /* (================================connect=====================================) */
+  .connect_twitter .connect_circle {
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 479px) and (max-width: 991px) {
+  .container {
+    grid-template-rows: auto auto 1fr 1fr auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "learn_more learn_more learn_more learn_more"
+      "iphone6 iphone6 iphone6 iphone6"
+      "new_keyboard new_keyboard games games"
+      "imac imac imac imac"
+      "connect_twitter connect_twitter icloud icloud"
+      "beast_choice beast_choice icloud icloud"
+      "popular popular popular popular"
+      "vision vision vision vision";
+  }
+  /* (================================iphone6=====================================) */
+  .iphone6 {
+    padding: 0 calc(var(--defalut-margin) * 4);
+  }
+  .iphone6 .iphone_img {
+    width: 27%;
+  }
+  /* (================================learn_more====================================) */
+  .learn_more {
+    padding: calc(var(--defalut-margin) * 5) 0;
+  }
+  .learn_more h1 {
+    max-width: 50rem;
+    line-height: 4.9rem;
+    font-size: 3.5rem;
+  }
+  /* (================================imac====================================) */
+  .imac .imac_desc a {
+    display: inline-block;
+    margin-top: calc(var(--defalut-margin) * 2);
+  }
+  /* (================================beast_choice=====================================) */
+  .beast_choice .best_img {
+    position: static;
+  }
+  .beast_choice .best_img {
+    position: relative;
+    bottom: -28%;
+  }
+  /* (================================connect=====================================) */
+  .connect_twitter .connect_circle {
+    top: 0;
+  }
+  /* (================================icloud=====================================) */
+  .icloud {
+    padding: calc(var(--defalut-margin) * 3) calc(var(--defalut-margin) * 1.8)
+      calc(var(--defalut-margin) * 7);
+  }
+  /* (================================popular=====================================) */
+  .popular {
+    padding: calc(var(--defalut-margin) * 3) 0;
+  }
+  /* (================================vision=====================================) */
+  .vision {
+    justify-content: center;
+  }
+  .vision .tv_img {
+    width: 26%;
+    position: relative;
+    left: -15%;
+  }
+  .vision h2 {
+    width: 29%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* (================================iphone6=====================================) */
+  .iphone6 {
+    justify-content: space-between;
+  }
+  .iphone6 .iphone_img {
+    width: 50%;
+  }
+  .iphone6 .iphone_des {
+    width: 36%;
+  }
+  /* (================================imac=====================================) */
+  .imac {
+    padding: calc(var(--defalut-margin) * 6.8) calc(var(--defalut-margin) * 2) 0;
+  }
+  .imac .imac_img {
+    left: -157%;
+  }
+  .connect_twitter .connect_circle {
+    top: -24%;
+  }
+}
+@media screen and (min-width: 1550px) {
+  /* (================================iphone6=====================================) */
+  .iphone6 .iphone_img {
+    width: 27%;
+  }
+  .imac .imac_img {
+    left: -71%;
+  }
+}
+@media screen and (min-width: 240px) and (max-width: 300px) {
+  /* (================================learn_more====================================) */
+  .learn_more h1 {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 24rem;
+  }
+  /* (================================vision===================================) */
+  .vision .tv_img {
+    left: -18%;
+  }
+  .vision img {
+    width: 20.1rem;
+  }
+  /* (================================new_keyboard====================================) */
+  .new_keyboard img {
+    width: 100%;
+  }
+  /* (================================imac====================================) */
+  .imac .img_heading {
+    width: 100%;
+  }
+  .imac .imac_desc {
+    width: 82%;
+  }
+  .imac .imac_img {
+    left: -76%;
+  }
+}
